@@ -9,7 +9,7 @@ Last-Update: 2019-03-08
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/cloudinit/sources/DataSourceEc2.py
 +++ b/cloudinit/sources/DataSourceEc2.py
-@@ -19,7 +19,6 @@ from cloudinit import sources
+@@ -20,7 +20,6 @@ from cloudinit import sources
  from cloudinit import url_helper as uhelp
  from cloudinit import util
  from cloudinit import warnings
@@ -17,7 +17,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
  LOG = logging.getLogger(__name__)
  
-@@ -415,17 +414,6 @@ class DataSourceEc2(sources.DataSource):
+@@ -416,17 +415,6 @@ class DataSourceEc2(sources.DataSource):
                  net_md, fallback_nic=iface,
                  full_network_config=util.get_cfg_option_bool(
                      self.ds_cfg, 'apply_full_imds_network_config', True))

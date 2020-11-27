@@ -7,7 +7,7 @@ Forwarded: not-needed
 Last-Update: 2020-06-01
 --- a/config/cloud.cfg.tmpl
 +++ b/config/cloud.cfg.tmpl
-@@ -168,9 +168,7 @@ system_info:
+@@ -170,9 +170,7 @@ system_info:
       groups: [adm, audio, cdrom, dialout, dip, floppy, lxd, netdev, plugdev, sudo, video]
       sudo: ["ALL=(ALL) NOPASSWD:ALL"]
       shell: /bin/bash
