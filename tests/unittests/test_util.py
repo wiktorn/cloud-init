@@ -455,6 +455,18 @@ class TestShellify(CiTestCase):
                 ["echo hi mom", ["echo", "hi dad"], ("echo", "hi", "sis")]
             ),
         )
+    def test_curly_braces(self):
+        self.assertEqual(
+                "\n".join(
+                    [
+                        "#!/bin/sh",
+                        "echo ': ${USER:=root}' >> /etc/default/toolbox",
+                    ]
+                ),
+                util.shellify(
+                    ["echo ': ${USER:=root}' >> /etc/default/toolbox",]
+                ),
+        )
 
     def test_supports_comments(self):
         self.assertEqual(
